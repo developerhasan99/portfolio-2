@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import { ArrowUpRight } from "lucide-astro";
+import logo from "../assets/logo.svg";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Mehedi Hasan - Full-Stack Web Developer">
+  <header class="fixed top-0 left-0 w-full z-10 py-4">
+    <div class="max-w-screen-xl mx-auto flex justify-between px-4 items-center">
+      <a href="/" class="flex items-end gap-1">
+        <Image src={logo} height={30} alt="Meheid Hasan" loading="eager" />
+        <span class="h-2 w-2 inline-block bg-primary rounded-full"></span></a
+      >
+      <a
+        href=""
+        target="_blank"
+        class="bg-background p-2 pl-4 rounded-full flex gap-2 items-center awesome-btn"
+      >
+        <span class="text-sm uppercase">Let's Talk </span>
+        <span
+          class="bg-primary h-7 w-7 flex items-center justify-center text-background rounded-full"
+        >
+          <ArrowUpRight />
+        </span>
+      </a>
+    </div>
+  </header>
+  <section id="hero" class="h-screen">
+    <h1>This is the hero section</h1>
+  </section>
+</Layout>
+
+<style>
+  section#hero {
+    filter: contrast(139%) brightness(300%);
+    background: linear-gradient(30deg, #0e1010, rgb(44 50 50 / 60%) 200%),
+      url(/noise.svg);
+  }
+</style>
